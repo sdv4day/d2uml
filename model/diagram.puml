@@ -1,0 +1,13 @@
+@startuml
+hide empty attributes
+hide empty methods
+
+!include classes.puml
+
+main .> Outliner
+ASTVisitor <|-- Outliner
+Outliner -> "*" Classifier
+Classifier --> "*" Field
+Classifier --> "*" Method
+Outliner ..> outliner
+@enduml
